@@ -30,11 +30,9 @@
 # b.place(x=180, y=380)
 # mainloop()
 
-from ipywidgets import Text, Button, VBox, Output
-from IPython.display import display
+
 from project import *
 
-# Initialize databases
 dataBase = []
 dataBase_b = []
 
@@ -42,18 +40,8 @@ buildDB_b()
 buildDB_D()
 buildDB()
 
-output = Output()
+file_name = input("Enter file name: ")
+plate_text = main5(file_name)
+print("Detected Plate Text:", plate_text)
 
-def on_button_click(b):
-    with output:
-        output.clear_output()
-        file_name = text_input.value
-        plate_text = main5(file_name)
-        print("Detected Plate Text:", plate_text)
-
-text_input = Text(description="File:")
-button = Button(description="Detect")
-button.on_click(on_button_click)
-
-display(VBox([text_input, button, output]))
 
