@@ -56,3 +56,4 @@ button = Button(description="Detect")
 button.on_click(on_button_click)
 
 display(VBox([text_input, button, output]))
+
