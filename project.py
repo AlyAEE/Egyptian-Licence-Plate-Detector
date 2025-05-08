@@ -3,7 +3,7 @@ import numpy as np
 import numba
 from numba import jit
 from commonfunctions import *
-from tkinter import *
+# from tkinter import *
 
 @jit(nopython=True)
 def get_white_blue(image, aux):
