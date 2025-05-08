@@ -31,6 +31,8 @@
 # mainloop()
 
 
+# run.py
+import sys
 from project import *
 
 dataBase = []
@@ -40,8 +42,8 @@ buildDB_b()
 buildDB_D()
 buildDB()
 
-file_name = input("Enter file name: ")
+# Get filename from command-line argument
+file_name = sys.argv[1]
 plate_text = main5(file_name)
 print("Detected Plate Text:", plate_text)
-
 
